@@ -1,0 +1,1 @@
+﻿alert("JS file ucitan u browser");

@@ -1,0 +1,13 @@
+{
+  "name": "staticki-fajlovi",
+  "version": "0.0.0",
+  "description": "StatickiFajlovi",
+  "main": "app.js",
+  "author": {
+    "name": "marko.spasojevic"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
