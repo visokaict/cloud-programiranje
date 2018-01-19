@@ -1,0 +1,12 @@
+{
+  "name": "exp-middleware-primer2",
+  "version": "0.0.0",
+  "description": "ExpMiddlewarePrimer2",
+  "main": "app.js",
+  "author": {
+    "name": "marko.spasojevic"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
