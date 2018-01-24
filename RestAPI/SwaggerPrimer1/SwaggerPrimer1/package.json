@@ -1,0 +1,13 @@
+{
+  "name": "swagger-primer1",
+  "version": "0.0.0",
+  "description": "SwaggerPrimer1",
+  "main": "app.js",
+  "author": {
+    "name": "marko.spasojevic"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "swagger-ui-express": "^2.0.14"
+  }
+}
