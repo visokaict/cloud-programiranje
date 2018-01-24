@@ -1,0 +1,9 @@
+{
+  "name": "console-chat-app",
+  "version": "0.0.0",
+  "description": "ConsoleChatApp",
+  "main": "app.js",
+  "author": {
+    "name": "marko.spasojevic"
+  }
+}
