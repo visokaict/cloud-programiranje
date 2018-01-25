@@ -1,0 +1,14 @@
+{
+  "name": "rest-apiprimer1",
+  "version": "0.0.0",
+  "description": "RestAPIPrimer1",
+  "main": "app.js",
+  "author": {
+    "name": "marko.spasojevic"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
