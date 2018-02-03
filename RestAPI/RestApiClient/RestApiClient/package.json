@@ -1,0 +1,9 @@
+{
+  "name": "rest-api-client",
+  "version": "0.0.0",
+  "description": "RestApiClient",
+  "main": "app.js",
+  "author": {
+    "name": "marko.spasojevic"
+  }
+}
