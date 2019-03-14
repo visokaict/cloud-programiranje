@@ -36,7 +36,25 @@ router.post('/register', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-    res.status(200).send({ access_token: '' });
+    const email = req.body.email;
+    const password = req.body.password;
+    var registeredUser = null;
+    usersRepo.forEach(function (user) {
+        if (user["email"] == email) {
+            registeredUser = user;
+        }
+    });
+    if (registeredUser === null) return res.status(404).send('User not found!');
+
+    const result = bcrypt.compareSync(password, registeredUser.password);
+
+    if (!result) return res.status(401).send('Password not valid!');
+    
+    const expiresIn = 24 * 60 * 60;
+    const accessToken = jwt.sign({ id: registeredUser.id }, SECRET_KEY, {
+        expiresIn: expiresIn
+    });
+    res.status(200).send({ "user": registeredUser.name, "access_token": accessToken, "expires_in": expiresIn });
 });
 
 router.get('/', (req, res) => {
