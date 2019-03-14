@@ -57,6 +57,18 @@ router.post('/login', (req, res) => {
     res.status(200).send({ "user": registeredUser.name, "access_token": accessToken, "expires_in": expiresIn });
 });
 
+router.post('/protected', (req, res) => {
+    const authorization = req.headers.authorization;
+    const tokenValue = authorization.split(" ")[1];
+    var tokenVerified = jwt.verify(tokenValue, SECRET_KEY, (err, tokenValue) => {
+        if (err) {
+            res.status(401).send('Token not valid');
+        } else {
+            res.status(200).send('You token is valid and you are seeing protected resource ');
+        }
+    });
+});
+
 router.get('/', (req, res) => {
     res.status(200).send('This is an authentication server');
 });
